@@ -104,6 +104,128 @@
 }
 
 
+nav {
+    background: #000;
+    font-family: Times, serif;
+    -webkit-font-smoothing: antialiased;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+
+        .tf-contact-us {
+            background-color: #3e6d74;
+        }
+
+        .tf-menu-lvl1 {
+            padding: 0 34.96px 0 18.24px;
+            position: relative;
+
+            a svg {
+                position: absolute;
+                right: 20px;
+                top: 32px;
+            }
+
+            &:hover > ul {
+                display: block;
+            }
+
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 0 10.64px 0 15.20px;
+                color: #fff;
+                font-size: 15.2px;
+                line-height: 69.875px;
+
+                &:hover {
+                    background-color: #52656E;
+                    opacity: 1;
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 67.89px;
+                padding-top: 6.6px;
+                text-align: left;
+                width: 220px;
+                z-index: 2222;
+
+                .tf-menu-lvl2 {       
+ 
+                    a svg {
+                        position: absolute;
+                        right: 20px;
+                        top: 32px;
+                    }
+        
+                    &:hover > ul {
+                        display: block;
+                    }
+                }
+
+                li {
+                    display: block;
+                    position: relative;
+                    padding: 15.2px 35px 15.2px 0;
+                    background-color: #000;
+
+                    a {
+                        line-height: 22.8px;
+                        padding: 7.6px 18.24px 7.6px 30.4px;
+                        color: #fff;
+                        
+                        // Forced opacity to 1 - overwrite obituaries page a:hover opacity 0.75
+                        &:hover {
+                            background-color: #000;
+                            color: #52656E;
+                            opacity: 1;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        left: 224px;
+                        top: 0;
+                        width: 220px;
+                        z-index: 2222;
+                        background-color: #000;
+
+                        li {
+                            padding: 15.2px 0;
+
+
+                            a {
+                                color: #fff;
+
+                                // Forced opacity to 1 - overwrite obituaries page a:hover opacity 0.75
+                                &:hover {
+                                    background-color: #000;
+                                    color: #52656E;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /***** Fonts *****/
