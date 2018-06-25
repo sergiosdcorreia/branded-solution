@@ -1,3 +1,9 @@
+/***** Header Styles *****/
+
+.tf-header-bg {
+    background-image: url('http://www.taylorsfunerals.co.uk/wp-content/themes/Taylors/skins/blessing/images/white_bg.jpg');
+}
+
 .tf-header-top {
     border-bottom: 1px solid #e4e2e1;
     font-family: Times, serif;
@@ -103,6 +109,8 @@
     }
 }
 
+
+/***** Menu Styles *****/
 
 nav {
     background: #000;
@@ -228,8 +236,106 @@ nav {
 
 
 
-/***** Fonts *****/
+/***** Footer Styles *****/
 
+.tf-footer-bg {
+    background-image: url('http://www.taylorsfunerals.co.uk/wp-content/themes/Taylors/skins/blessing/images/white_bg.jpg');
+    padding: 76px 0 30.4px 0;
+    font-family: Times, serif;
+    -webkit-font-smoothing: antialiased;
+
+    .tf-container {
+        width: 1170px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .tf-flex {
+            display: flex;
+            justify-content: space-between;
+
+            .tf-col {
+                width: 262.1px;
+                max-width: 100%;
+                padding-right: 30.4px;
+                margin-bottom: 22.8px;
+
+                .tf-title {
+                    font-family: "Cinzel", serif;
+                    -webkit-font-smoothing: antialiased;
+                    margin: 0 0 30.4px 0;
+                    color: #493834;
+
+                }
+
+                &:last-child {
+                    width: 292px;
+                    max-width: 100%;
+                    
+                }
+
+                ul {
+                    margin-top: 30.4px;
+                    padding: 0;
+                    font-family: Times, serif;
+                    -webkit-font-smoothing: antialiased;
+
+                    li {
+                        list-style: none;
+                        display: block;
+                        padding-left: 22.8px;
+                        margin-bottom: 3px;
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            left: 0;
+                        }
+                        
+                        p {
+                            color: #afa499;
+                            margin: 0;
+                            font-size: 15.2px;
+                            line-height: 22.8px;
+
+                        }
+
+                        a {
+                            color: #000;
+                            font-size: 15.2px;
+                            line-height: 22.8px;
+                            text-decoration: none;
+
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/***** Footer Bottom *****/
+
+.tf-footer-bottom {
+    background-color: #000;
+    text-align: center;
+    padding: 22.8px 0;
+
+    p {
+        color: rgba(255,255,255,0.55);
+        font-family: Times, serif;
+        font-size: 15.2px;
+        line-height: 22.8px;
+        margin: 0;
+    }
+}
+
+
+
+/***** Fonts *****/
 
 /* latin */
 @font-face {
@@ -247,12 +353,13 @@ nav {
     font-weight: 400;
     src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v7/8vIJ7ww63mVu7gt7-GT7PkRXM8Xx.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
+}
+
+/* latin */
+@font-face {
     font-family: 'Cinzel';
     font-style: normal;
     font-weight: 400;
     src: local('Cinzel Regular'), local('Cinzel-Regular'), url(https://fonts.gstatic.com/s/cinzel/v7/8vIJ7ww63mVu7gt79mT7PkRXMw.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
