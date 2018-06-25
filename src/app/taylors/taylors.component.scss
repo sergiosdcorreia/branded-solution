@@ -33,7 +33,7 @@
 
 .tf-header {
     margin-top: 40px;
-    margin-bottom: 44px;
+    padding-bottom: 44px;
 
     .tf-container {
         width: 1170px;
@@ -43,6 +43,10 @@
         .tf-flex {
             display: flex;
             justify-content: space-between;
+
+            .tf-hamburger {
+                display: none;
+            }
 
             .tf-header-lft {
                 font-family: 'Crimson Text';
@@ -69,6 +73,7 @@
                         line-height: 19.76px;
                         font-size: 15.2px;
                         color: #3e6d74;
+                        text-transform: uppercase;
                     }
                 }
             }
@@ -177,6 +182,14 @@ nav {
                         position: absolute;
                         right: 20px;
                         top: 32px;
+                    }
+
+                    a .tf-arrow-right {
+                        display: block;
+                    }
+
+                    .tf-arrow-down {
+                        display: none;
                     }
         
                     &:hover > ul {
@@ -333,6 +346,244 @@ nav {
     }
 }
 
+
+/***** Media Queries *****/
+
+@media only screen and (max-width: 800px) {
+
+    .tf-header-top .tf-container .tf-flex {
+        display: block;
+        text-align: center;
+        width: 420px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .tf-top-header-lft p, .tf-top-header-right p {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .tf-header {
+        margin-top: 37.5px;
+
+        .tf-container .tf-flex {
+            display: block;
+            width: 420px;
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+    
+            .tf-hamburger {
+                display: block;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 15px 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 1px;
+                color: #ffffff;
+                cursor: pointer;
+                font-family: Arial, Helvetica, sans-serif;
+                position: absolute;
+    
+                &:after {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    height: 7px;
+                    width: 22px;
+                    border-top: 2px solid #c9c1ba;
+                    border-bottom: 2px solid #c9c1ba;
+                    right: 0px;
+                    top: 16px;
+                }
+            
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    height: 3px;
+                    width: 22px;
+                    border-top: 2px solid #c9c1ba;
+                    right: 0px;
+                    top: 26px;
+                }    
+            }
+    
+            .tf-header-lft .tf-flex {
+                width: 100%;
+                display: block;
+            
+                img {
+                    width: 52px;
+                    max-width: 100%;
+                    display: block;
+                }
+    
+                a {
+                    padding: 20px 0 0 0;
+                    margin: 0;
+    
+                    p.tf-taylors {
+                        margin: 0;
+                        font-size: 41.66px;
+                        line-height: 22.5px;
+                    }
+    
+                    p.tf-slogan {
+                        line-height: 16.25px;
+                        font-size: 12.5px;
+                        color: #3e6d74;
+                    
+                    }
+                }
+            }
+    
+            .tf-header-right .tf-flex {
+    
+                display: flex;
+                justify-content: flex-end;
+    
+                img {
+                    padding: 12.16px;
+                    border: 4.5px solid rgb(225, 221, 217);
+                    width: 26px;
+                    height: 31px;
+                    margin-right: 10.64px;
+                }
+    
+                .tf-contact {
+                    margin: 7.6px 0 0 3px;
+    
+                    .tf-phone {
+                        font-family: 'Cinzel', serif;
+                        -webkit-font-smoothing: antialiased;
+                        font-size: 25.3232px;
+                        line-height: 30.39px;
+                        margin: 0;
+                    }
+    
+                    .tf-get-in-touch {
+                        color: #3e6d74;
+                        font-family: Times, serif;
+                        -webkit-font-smoothing: antialiased;
+                        font-size: 14.44px;
+                        line-height: 22.8px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    nav ul {
+        width: 450px;
+        max-width: 100%;
+        padding: 15px 18px 7.5px 18px;
+        margin: 0 auto;
+
+        .tf-contact-us {
+            background-color: #000;
+        }
+
+        .tf-menu-lvl1 {
+            padding: 0;
+
+            a svg {
+                top: 12px;
+            }
+
+            &:hover > ul {
+                display: none;
+            }
+        }
+
+        li {
+            display: block;
+            text-align: left;
+            position: static;
+
+            a {
+                font-size: 18.75px;
+                line-height: 19.5px;
+                padding: 5.625px 9.375px;
+                text-align: left;
+
+                &:hover {
+                    background: #f1ad48;
+                    opacity: 1;
+                }
+            }
+
+            ul {
+                display: none;
+                position: static;
+                margin: 7.5px 0 0 30px;
+                width: 100%;
+                padding: 0;
+
+                .tf-menu-lvl2 {
+                    a svg {
+                        top: 15px;
+                        right: 50px;
+                    }
+
+                    a .tf-arrow-right {
+                        display: none;
+                    }
+
+                    a .tf-arrow-down {
+                        display: block;
+                    }
+
+                    &:hover > ul {
+                        display: none;
+                    }
+                }
+
+                li {
+                    padding: 0;
+                    margin-bottom: 3px;
+
+                    a {
+                        padding: 5.625px 9.375px;
+
+                        &:hover {
+                            background: #f1ad48;
+                            opacity: 1;
+                        }
+                    }
+
+                    ul {
+                        display: none;
+                        position: static;
+                        width: 80%;
+                        margin: 7.5px 0 0 30px;
+                        padding: 0;
+
+                        li {
+                            padding: 0;
+                            margin-bottom: 3px;
+
+                            a {
+                                padding: 5.625px 9.375px;
+
+                                &:hover {
+                                    background: #f1ad48;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 /***** Fonts *****/
