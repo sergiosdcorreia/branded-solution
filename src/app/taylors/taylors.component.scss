@@ -74,6 +74,7 @@
                         font-size: 15.2px;
                         color: #3e6d74;
                         text-transform: uppercase;
+                        margin-top: 15.2px;
                     }
                 }
             }
@@ -87,6 +88,7 @@
                     width: 26px;
                     height: 31px;
                     margin-right: 10.64px;
+                    box-sizing: content-box;
                 }
 
                 .tf-contact {
@@ -118,6 +120,7 @@
 /***** Menu Styles *****/
 
 nav {
+    display: block;
     background: #000;
     font-family: Times, serif;
     -webkit-font-smoothing: antialiased;
@@ -140,11 +143,6 @@ nav {
                 right: 20px;
                 top: 32px;
             }
-
-            &:hover > ul {
-                display: block;
-            }
-
         }
 
         li {
@@ -176,7 +174,8 @@ nav {
                 width: 220px;
                 z-index: 2222;
 
-                .tf-menu-lvl2 {       
+                .tf-menu-lvl2 {
+                    z-index: 3333; 
  
                     a svg {
                         position: absolute;
@@ -190,10 +189,6 @@ nav {
 
                     .tf-arrow-down {
                         display: none;
-                    }
-        
-                    &:hover > ul {
-                        display: block;
                     }
                 }
 
@@ -247,6 +242,9 @@ nav {
     }
 }
 
+.tf-hover:hover > ul {
+    display: block;
+}
 
 
 /***** Footer Styles *****/
@@ -390,6 +388,7 @@ nav {
                 cursor: pointer;
                 font-family: Arial, Helvetica, sans-serif;
                 position: absolute;
+                z-index: 2222;
     
                 &:after {
                     display: block;
@@ -482,9 +481,9 @@ nav {
     }
 
     nav {
-        display: none;
 
         ul {
+            display: none;
             width: 450px;
             max-width: 100%;
             padding: 15px 18px 7.5px 18px;
@@ -587,6 +586,14 @@ nav {
                 }
             }
         }
+    }
+
+    .tf-hover:hover > ul {
+        display: block;
+    }
+
+    .tf-hidden {
+        display: none;
     }
 
     .tf-footer-bg .tf-container {
